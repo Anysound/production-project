@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/", // папка сборки, неактуальна с webpack конфигом
+    "noImplicitAny": true, // позволяет использовать свойства с явным указанием типа
+    "module": "es2020",
+    "target": "es5", // указание спецификации, в которую компилируется рабочий код. Делается для кросс-браузерности
+    "jsx": "react-jsx",
+    "allowJs": true, // обрабатываеются не только ts, но и js файлы
+    "moduleResolution": "node",
+    "esModuleInterop": true, // позволяет работать с пакетами, которые используют common.js (require(), module.exports ) как с обычными пакетами с помощью import
+    "allowSyntheticDefaultImports": true, // позволяет использовать default import. вместо import * as React пишем import React from "react"
+    "baseUrl": "."
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
