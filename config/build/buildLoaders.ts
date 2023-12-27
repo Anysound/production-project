@@ -29,5 +29,11 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  return [typescriptLoader, cssLoader];
+  const javascriptLoader = {
+    test: /\.jsx?$/,
+    use: "js-loader",
+    exclude: /node_modules/,
+  };
+
+  return [typescriptLoader, cssLoader, javascriptLoader];
 }
