@@ -8,7 +8,7 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
         modules: [
             options.paths.src, 'node_modules'
         ],
-        mainFiles: ['index'],
-        alias: {}
+        mainFiles: ['index'], // для каждого модуля index файл будет главным
+        alias: {} // для указания пути к модулям напрямую
     }
 }
